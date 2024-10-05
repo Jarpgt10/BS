@@ -9,7 +9,7 @@ export default function Shopping({ item, index }) {
     };
 
     return (
-        <div className="flex flex-row items-center bg-[#f0eeed] w-full m-2
+        <div className="flex flex-row items-center bg-[#f0eeed] w-full m-2 
             sm:w-[90%] 
             md:w-[80%] 
             lg:w-[70%] 

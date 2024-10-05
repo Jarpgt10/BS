@@ -7,28 +7,29 @@ export default function Filtro() {
     const { FilterFunctions } = useContext(PrivateContext);
 
     const handleChange = (event, precio) => {
-        FilterFunctions.precio(precio)
+        FilterFunctions.precio(precio);
     };
 
     return (
         <>
-            <div className='m-5 p-5  rounded-md border-2 border-[#fecafe]   sm:w-[80%] w-[70%]'>
-                <div className='flex justify-between text-gray-600 py-3'>
-                    <strong>Filtro</strong>
-                    {ICON.filter}
+            <div className='m-5 p-5 bg-white rounded-lg border-2 border-[#fecafe] shadow-sm transition-all duration-300 sm:w-[90%] md:w-[80%] lg:w-[70%] hover:shadow-md'>
+                <div className='flex justify-between items-center text-gray-600 pb-3'>
+                    <strong className='text-lg font-medium'>Filtro</strong>
+                    <span className='text-gray-500'>{ICON.filter}</span>
                 </div>
                 <Divider />
-                <div className='text-gray-600 py-3'>
-                    <span>Precio</span>
-                    <div className='flex justify-center items-center gap-5'>
+                <div className='text-gray-600 py-4'>
+                    <span className='block mb-2 text-sm font-semibold'>Precio</span>
+                    <div className='flex justify-center items-center gap-4'>
                         <Slider
-                            defaultValue={50}
+                            defaultValue={25}
                             onChange={handleChange}
-                            aria-label="Default"
+                            aria-label="Precio"
                             valueLabelDisplay="auto"
-                            max={50}
+                            max={100}
+                            className="text-pink-500" // Cambia el color del Slider
                         />
-                        50
+                        <span className="text-gray-700 font-semibold">100</span>
                     </div>
                 </div>
             </div>
